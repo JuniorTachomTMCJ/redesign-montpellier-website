@@ -16,9 +16,228 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline font-inter ">
-        Hello world! <i class="fas fa-home"></i>
-    </h1>
+    <!-- start header -->
+    <header class="py-3 ">
+        <div class="container flex justify-between items-center">
+            <a href="#" class="mr-7">
+                <img src="./assets/logo.svg" alt="logo">
+            </a>
+
+            <nav class="items-center gap-10 hidden lg:flex">
+                <ul class="nav__items flex items-start gap-4 relative ">
+                    <li class="nav__item group">
+                        <a href="#" class="nav__link">La ville <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+                            style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    La mairie de Montpellier
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Le territoire
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Pratique
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Les Montpelliérains
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille <i
+                                            class="fa-solid fa-arrow-right-long text-gray-400 mr-2"></i></a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav__item group">
+                        <a href="#" class="nav__link">La Municipalité <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+                            style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    La mairie de Montpellier 2
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Le territoire
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Pratique
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Les Montpelliérains
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille <i
+                                            class="fa-solid fa-arrow-right-long text-gray-400 mr-2"></i></a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav__item group">
+                        <a href="#" class="nav__link">Programme de la ville<i class="fa-solid fa-angle-down"></i></a>
+                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+                            style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    La mairie de Montpellier 3
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Le territoire
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Pratique
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <ul class="col-span-3 border-r border-gray-200 px-7">
+                                <a href="#"
+                                    class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
+                                    Les Montpelliérains
+                                </a>
+                                <div class="flex flex-col justify-start items-start gap-2 text-gray-600">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille <i
+                                            class="fa-solid fa-arrow-right-long text-gray-400 mr-2"></i></a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">Services </a></li>
+
+                    <li class="nav__item"><a href="#" class="nav__link">Actualités</a></li>
+                </ul>
+
+                <a href="#" class="btn"><i class="fa-regular fa-user mr-2"></i> Mon espace</a>
+            </nav>
+
+            <div class="block lg:hidden cursor-pointer">
+                <i class="fa-solid fa-bars text-3xl"></i>
+            </div>
+        </div>
+
+    </header>
+    <!-- end header -->
 </body>
 
 </html>

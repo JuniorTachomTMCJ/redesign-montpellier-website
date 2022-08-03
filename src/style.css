@@ -9,3 +9,21 @@
     @apply font-inter;
   }
 }
+
+@layer components {
+  .btn {
+    @apply cursor-pointer p-3 bg-primary text-white rounded-sm font-medium hover:bg-blue-900 transition;
+  }
+
+  .nav__link {
+    @apply font-medium text-gray-600 hover:text-primary group-hover:text-primary;
+  }
+
+  .nav__link i {
+    @apply transition duration-200 ml-2 text-gray-400 group-hover:text-primary group-hover:rotate-180;
+  }
+
+  .nav__link:hover i {
+    @apply text-primary rotate-180;
+  }
+}
