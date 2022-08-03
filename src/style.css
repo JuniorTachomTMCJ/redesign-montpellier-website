@@ -12,7 +12,7 @@
 
 @layer components {
   .btn {
-    @apply cursor-pointer p-3 bg-primary text-white rounded-sm font-medium hover:bg-blue-900 transition;
+    @apply cursor-pointer p-3 bg-primary text-white rounded-sm font-medium hover:bg-blue-900 transition border-2 border-transparent;
   }
 
   .nav__link {
