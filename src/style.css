@@ -26,4 +26,16 @@
   .nav__link:hover i {
     @apply text-primary rotate-180;
   }
+
+  .actuality-card * {
+    @apply transition-all duration-300;
+  }
+
+  .actuality-card-img::before {
+    background: linear-gradient(
+      180deg,
+      rgba(27, 27, 27, 0) -1.5%,
+      #1b1b1b 103.4%
+    );
+  }
 }
