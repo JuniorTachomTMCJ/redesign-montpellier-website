@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-inter;
   }
@@ -46,5 +50,18 @@
       rgba(27, 27, 27, 0) -1.5%,
       #1b1b1b 103.4%
     );
+  }
+
+  .fade {
+    animation: fadeIn 200 ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
