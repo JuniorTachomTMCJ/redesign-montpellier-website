@@ -52,6 +52,18 @@
     );
   }
 
+  .info-controls > div:nth-child(even) label {
+    @apply border-[#1d3d91] border-opacity-40;
+  }
+
+  .info-controls > div:nth-child(odd) label {
+    @apply border-[#1d3d91] border-opacity-20;
+  }
+
+  .info-controls > div label {
+    @apply cursor-pointer transition-all peer-checked:border-primary peer-checked:border-opacity-100;
+  }
+
   .fade {
     animation: fadeIn 200 ease;
   }
