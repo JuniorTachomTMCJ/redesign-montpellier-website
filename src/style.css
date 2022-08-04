@@ -27,11 +27,20 @@
     @apply text-primary rotate-180;
   }
 
-  .actuality-card * {
+  .event-items::-webkit-scrollbar {
+    @apply w-0;
+  }
+  .event-card {
+    @apply flex-1 shrink-0 basis-full pt-6;
+  }
+
+  .actuality-card *,
+  .event-card * {
     @apply transition-all duration-300;
   }
 
-  .actuality-card-img::before {
+  .actuality-card-img::before,
+  .event-card-img::before {
     background: linear-gradient(
       180deg,
       rgba(27, 27, 27, 0) -1.5%,
