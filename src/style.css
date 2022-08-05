@@ -64,16 +64,33 @@
     @apply cursor-pointer transition-all peer-checked:border-primary peer-checked:border-opacity-100;
   }
 
-  .fade {
-    animation: fadeIn 200 ease;
+  .heroSlideIn {
+    animation: heroSlideIn ease-in-out forwards;
+    animation-duration: 1.5s;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0.4;
+  .heroSlideOut {
+    animation: heroSlideOut ease-in-out;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes heroSlideIn {
+    0% {
+      transform: translateX(-100%);
     }
-    to {
-      opacity: 1;
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes heroSlideOut {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(100%);
     }
   }
 }
