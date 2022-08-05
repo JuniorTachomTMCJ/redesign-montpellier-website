@@ -242,9 +242,9 @@
     <!-- start Hero section -->
     <section class="relative hero" id="hero">
         <!-- start Slider -->
-        <div class="relative min-h-screen">
+        <div class="relative min-h-screen overflow-hidden">
             <!-- start slingle sliger -->
-            <div class="md:min-h-screen bg-center bg-no-repeat bg-cover flex-col justify-center py-5 pb-28 hero-slide flex -translate-x-full absolute inset-0"
+            <div class="md:min-h-screen bg-center bg-no-repeat bg-cover flex-col justify-center py-5 pb-28 hero-slide flex -translate-x-full absolute inset-0 "
                 style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('./assets/images/slider-1.jpg');background-position: center; background-size: cover; background-repeat: no-repeat; ">
                 <div class="container relative z-10">
                     <div class="text-white px-0 md:px-[5.125rem]">
@@ -548,23 +548,24 @@
     <!-- end events home section -->
 
     <!-- start events section -->
-    <section class="py-14">
+    <section class="py-14 ">
         <!-- start events controls -->
         <div class="container py-6 block md:hidden">
             <div class="flex items-center gap-2">
-                <i
-                    class="fa-solid fa-arrow-right btn bg-transparent text-blue-800 border-blue-300 rounded-sm hover:bg-blue-300 rotate-180 "></i>
-                <i
-                    class="fa-solid fa-arrow-right btn bg-transparent text-blue-800 border-blue-300 rounded-sm hover:bg-blue-300 "></i>
+                <i class="fa-solid fa-arrow-right btn bg-transparent text-blue-800 border-blue-300 rounded-sm hover:bg-blue-300 rotate-180 prev-btn"
+                    onclick="plusEventSlides(-1)"></i>
+                <i class="fa-solid fa-arrow-right btn bg-transparent text-blue-800 border-blue-300 rounded-sm hover:bg-blue-300 next-btn"
+                    onclick="plusEventSlides(1)"></i>
             </div>
         </div>
         <!-- end events controls -->
 
-        <div class="container">
+        <div class="container relative">
             <!-- start Grid container -->
-            <div class="flex overflow-x-auto md:overflow-visible md:grid grid-cols-12 gap-x-6 gap-y-12 event-items">
+            <div class="flex sm:grid grid-cols-12 gap-x-6 gap-y-12 event-items h-64 sm:h-full overflow-hidden">
                 <!-- start Single card -->
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card">
+                <div
+                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-1.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -582,7 +583,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -590,7 +591,8 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card">
+                <div
+                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-2.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -608,7 +610,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -616,7 +618,8 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card">
+                <div
+                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-3.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -634,7 +637,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -642,7 +645,8 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card">
+                <div
+                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-4.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -660,7 +664,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100">
+                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -675,7 +679,7 @@
     <!-- end events section -->
 
     <!-- start info section -->
-    <section class="bg-gray-50s">
+    <section class="bg-gray-50 py-14">
         <div class="container">
             <div class="flex items-start gap-5 overflow-hidden">
                 <div class="group flex-1 shrink-0 basis-80">

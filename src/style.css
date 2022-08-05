@@ -74,6 +74,36 @@
     animation-duration: 1.5s;
   }
 
+  .eventLeftSlideOut {
+    animation: eventLeftSlideOut ease-in-out;
+    animation-duration: 1.5s;
+  }
+
+  .eventLeftSlideIn {
+    animation: eventLeftSlideIn ease-in-out forwards;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes eventLeftSlideIn {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes eventLeftSlideOut {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   @keyframes heroSlideIn {
     0% {
       transform: translateX(-100%);
@@ -92,5 +122,12 @@
     100% {
       transform: translateX(100%);
     }
+  }
+}
+
+@layer utilities {
+  .prev-btn.desactived,
+  .next-btn.desactived {
+    @apply bg-gray-500 border-transparent text-white cursor-default pointer-events-none;
   }
 }

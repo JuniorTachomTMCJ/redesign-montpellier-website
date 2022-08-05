@@ -10,13 +10,13 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Hero slider
+// Start Hero slider
 let slideIndex = 1;
 let heroProgressBar = document.querySelector(".hero .progress > div");
 
 showHeroSlides(slideIndex);
 
-function plusSlides(n) {
+function plusHeroSlides(n) {
   showHeroSlides((slideIndex += n));
 }
 
@@ -43,5 +43,72 @@ function showHeroSlides(n) {
 }
 
 setInterval(() => {
-  plusSlides(1);
+  plusHeroSlides(1);
 }, 5000);
+
+// End Hero Slider
+
+// Start Events slider
+
+let slideEventIndex = 1;
+
+showEventSlides(slideEventIndex);
+
+function plusEventSlides(n) {
+  if (n === 1) {
+    showEventSlides((slideEventIndex += n));
+  } else {
+    showEventSlides((slideEventIndex += n), false);
+  }
+}
+
+function showEventSlides(n, rlt = true) {
+  let next = document.querySelector(".next-btn");
+  let prev = document.querySelector(".prev-btn");
+
+  let i;
+  let eventSlides = document.getElementsByClassName("event-card");
+
+  if (n > eventSlides.length) {
+    slideEventIndex = 1;
+  }
+
+  if (n < 1) {
+    slideEventIndex = eventSlides.length;
+  }
+
+  if (rlt) {
+    for (i = 0; i < eventSlides.length; i++) {
+      eventSlides[i].classList.remove("eventLeftSlideIn");
+      eventSlides[i].classList.remove("heroSlideIn");
+      eventSlides[i].classList.add("heroSlideOut");
+    }
+
+    eventSlides[slideEventIndex - 1].classList.remove("heroSlideOut");
+    eventSlides[slideEventIndex - 1].classList.remove("eventLeftSlideOut");
+    eventSlides[slideEventIndex - 1].classList.add("heroSlideIn");
+  } else {
+    for (i = 0; i < eventSlides.length; i++) {
+      eventSlides[i].classList.remove("heroSlideIn");
+      eventSlides[i].classList.remove("eventLeftSlideIn");
+      eventSlides[i].classList.add("eventLeftSlideOut");
+    }
+
+    eventSlides[slideEventIndex - 1].classList.remove("eventLeftSlideOut");
+    eventSlides[slideEventIndex - 1].classList.remove("heroSlideOut");
+    eventSlides[slideEventIndex - 1].classList.add("eventLeftSlideIn");
+  }
+
+  if (slideEventIndex - 1 == 0) {
+    prev.classList.add("desactived");
+  } else {
+    prev.classList.remove("desactived");
+  }
+  if (slideEventIndex - 1 == eventSlides.length - 1) {
+    next.classList.add("desactived");
+  } else {
+    next.classList.remove("desactived");
+  }
+}
+
+// End Events Slider
