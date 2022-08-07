@@ -1080,6 +1080,14 @@ nav ul input:checked + label i{
   right: 5rem;
 }
 
+.right-9{
+  right: 2.25rem;
+}
+
+.right-12{
+  right: 3rem;
+}
+
 .z-\[10000\]{
   z-index: 10000;
 }
@@ -1102,6 +1110,10 @@ nav ul input:checked + label i{
 
 .-z-50{
   z-index: -50;
+}
+
+.z-0{
+  z-index: 0;
 }
 
 .col-span-3{
