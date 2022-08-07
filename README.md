@@ -19,7 +19,7 @@ Integration of a model designed by [Johan Gaby](https://www.behance.net/mbagnajo
 
 - Figma URL : [click here](https://www.figma.com/file/uPvjGgwsvwKP1rcMyEFklc/RedesignMontpellierWebsite?node-id=0%3A1)
 - Solution URL : [https://github.com/JuniorTachomTMCJ/redesign-montpellier-website.git](https://github.com/JuniorTachomTMCJ/redesign-montpellier-website.git)
-- Live Site URL :
+- Live Site URL : [https://juniortachomtmcj.github.io/redesign-montpellier-website/](https://juniortachomtmcj.github.io/redesign-montpellier-website/)
 
 ### Built with
 
