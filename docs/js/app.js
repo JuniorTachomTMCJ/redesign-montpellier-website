@@ -139,3 +139,72 @@ function showEventSlides(n, rlt = true) {
 }
 
 // End Events Slider
+
+// Start info  slider
+let infoContainer = document.querySelector(".info-items");
+let infoControls = document.querySelector(".info-controls");
+let infoItems = document.querySelectorAll(".info-item");
+
+newControl = (index) => {
+  let div = document.createElement("div");
+  div.className = "flex";
+
+  let input = document.createElement("input");
+  input.type = "radio";
+  input.name = "slider-info";
+  input.id = `slider-info-${index}`;
+  input.className = "hidden peer";
+  if (index === 0) {
+    input.checked = true;
+  }
+
+  let label = document.createElement("label");
+  label.htmlFor = `slider-info-${index}`;
+  label.className =
+    "border-2 w-10 peer-checked:border-primary peer-checked:border-opacity-100 transition-all duration-500";
+
+  label.addEventListener("click", (e) => {
+    infoItems[getContentItemCount() * index].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  });
+
+  div.appendChild(input);
+  div.appendChild(label);
+
+  return div;
+};
+
+getContentItemCount = () => {
+  let contentItemCount = 1;
+  while (
+    infoItems[0].offsetWidth * contentItemCount <=
+    infoContainer.offsetWidth
+  ) {
+    contentItemCount++;
+  }
+  contentItemCount--;
+
+  return contentItemCount;
+};
+
+showInfoSlides = () => {
+  infoControls.innerHTML = "";
+  infoContainer.scrollTo(0, 0);
+
+  let numberOfControls = Math.floor(infoItems.length / getContentItemCount());
+
+  for (let index = 0; index < numberOfControls; index++) {
+    let div = newControl(index);
+    infoControls.appendChild(div);
+  }
+};
+
+showInfoSlides();
+window.addEventListener("resize", () => {
+  showInfoSlides();
+});
+
+// End info  slider
