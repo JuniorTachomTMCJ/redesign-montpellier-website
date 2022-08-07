@@ -126,7 +126,7 @@
   }
 
   .scaleInFwd {
-    animation: scaleInFwd 1.5s ease forwards;
+    animation: scaleInFwd 1s ease forwards;
   }
 
   .heroSlideIn {

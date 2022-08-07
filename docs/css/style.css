@@ -844,8 +844,8 @@ nav ul input:checked + label i{
 }
 
 .scaleInFwd {
-  -webkit-animation: scaleInFwd 1.5s ease forwards;
-          animation: scaleInFwd 1.5s ease forwards;
+  -webkit-animation: scaleInFwd 1s ease forwards;
+          animation: scaleInFwd 1s ease forwards;
 }
 
 .heroSlideIn {
@@ -1188,6 +1188,10 @@ nav ul input:checked + label i{
   display: none;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .h-0{
   height: 0px;
 }
@@ -1228,16 +1232,16 @@ nav ul input:checked + label i{
   height: 2.5rem;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .max-h-\[calc\(100vh-200px\)\]{
   max-height: calc(100vh - 200px);
 }
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .w-\[56\.25rem\]{
@@ -1258,10 +1262,6 @@ nav ul input:checked + label i{
 
 .w-10{
   width: 2.5rem;
-}
-
-.w-screen{
-  width: 100vw;
 }
 
 .max-w-xs{
