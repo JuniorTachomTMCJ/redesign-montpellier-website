@@ -1,4 +1,8 @@
 let btnScrollToTop = document.querySelector("#scrollToTop");
+let actualitiesCards = document.querySelectorAll(".actuality-card");
+let eventsCards = document.querySelectorAll(".event-card");
+let eventHome = document.querySelector(".event-home");
+
 document.addEventListener("scroll", () => {
   let doc = document.documentElement;
   let scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -7,6 +11,28 @@ document.addEventListener("scroll", () => {
     btnScrollToTop.style.display = "flex";
   } else {
     btnScrollToTop.style.display = "none";
+  }
+
+  actualitiesCards.forEach((item) => {
+    let topDistance = item.offsetTop;
+
+    if (topDistance - 500 < scrollTop) {
+      item.classList.add("scaleInFwd");
+    }
+  });
+
+  eventsCards.forEach((item) => {
+    let topDistance = item.offsetTop;
+
+    if (topDistance - 500 < scrollTop) {
+      item.classList.add("scaleInFwd");
+    }
+  });
+
+  let topDistanceEventHome = eventHome.offsetTop;
+
+  if (topDistanceEventHome - 500 < scrollTop) {
+    eventHome.classList.add("fadeInLeft");
   }
 });
 
@@ -39,6 +65,7 @@ function showHeroSlides(n) {
 
   heroSlides[slideIndex - 1].classList.remove("heroSlideOut");
   heroSlides[slideIndex - 1].classList.add("heroSlideIn");
+
   heroProgressBar.style.height = `${(slideIndex / heroSlides.length) * 100}%`;
 }
 

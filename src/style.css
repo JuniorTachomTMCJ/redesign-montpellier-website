@@ -7,6 +7,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply overflow-x-hidden;
   }
 
   body {
@@ -20,14 +21,22 @@
   }
 
   .nav__link {
-    @apply font-medium text-gray-600 hover:text-primary group-hover:text-primary;
+    @apply font-medium text-gray-600 hover:text-primary peer-checked:text-primary;
   }
 
   .nav__link i {
-    @apply transition duration-200 ml-2 text-gray-400 group-hover:text-primary group-hover:rotate-180;
+    @apply transition duration-200 ml-2 text-gray-400;
   }
 
   .nav__link:hover i {
+    @apply lg:text-primary lg:rotate-180;
+  }
+
+  nav input:checked + label i {
+    @apply text-primary rotate-180;
+  }
+
+  nav ul input:checked + label i {
     @apply text-primary rotate-180;
   }
 
@@ -62,6 +71,15 @@
 
   .info-controls > div label {
     @apply cursor-pointer transition-all peer-checked:border-primary peer-checked:border-opacity-100;
+  }
+
+  /* Animation */
+  .fadeInLeft {
+    animation: fadeInLeft 400ms ease forwards;
+  }
+
+  .scaleInFwd {
+    animation: scaleInFwd 1.5s ease forwards;
   }
 
   .heroSlideIn {
@@ -121,6 +139,28 @@
 
     100% {
       transform: translateX(100%);
+    }
+  }
+
+  @keyframes scaleInFwd {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
     }
   }
 }

@@ -17,18 +17,25 @@
 
 <body>
     <!-- start header -->
-    <header class="py-3 ">
+    <header class="py-3 sticky shadow-md bg-white right-0 left-0 top-0 z-50">
         <div class="container flex justify-between items-center">
             <a href="#" class="mr-7">
                 <img src="./assets/logo.svg" alt="logo">
             </a>
 
+            <!-- start nav desktop -->
             <nav class="items-center gap-10 hidden lg:flex">
                 <ul class="nav__items flex items-start gap-4 relative ">
+
+                    <!-- start single nav-item -->
                     <li class="nav__item group">
+
                         <a href="#" class="nav__link">La ville <i class="fa-solid fa-angle-down"></i></a>
-                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start before:opacity-0 group-hover:before:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+
+                        <!-- start sub-nav -->
+                        <div class="absolute z-[1000] top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
                             style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
+
                             <ul class="col-span-3 border-r border-gray-200 px-7">
                                 <a href="#"
                                     class="inline-block text-lg font-semibold text-gray-900 mb-4 hover:text-primary relative before:absolute before:left-0 before:bottom-0  before:h-[.125rem] before:w-0 before:transition-all before:bg-primary/40 hover:before:w-2/4">
@@ -89,11 +96,14 @@
                                 </div>
                             </ul>
                         </div>
+                        <!-- end sub-nav -->
+
                     </li>
+                    <!-- end single nav-item -->
 
                     <li class="nav__item group">
                         <a href="#" class="nav__link">La Municipalité <i class="fa-solid fa-angle-down"></i></a>
-                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start before:opacity-0 group-hover:before:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+                        <div class="absolute z-[1000] top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
                             style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
                             <ul class="col-span-3 border-r border-gray-200 px-7">
                                 <a href="#"
@@ -159,7 +169,7 @@
 
                     <li class="nav__item group">
                         <a href="#" class="nav__link">Programme de la ville<i class="fa-solid fa-angle-down"></i></a>
-                        <div class="absolute top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start before:opacity-0 group-hover:before:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
+                        <div class="absolute z-[1000] top-[130%] right-0 bg-white w-[56.25rem] grid grid-cols-12 items-start opacity-0 group-hover:opacity-100 invisible group-hover:visible  transition-all duration-500 py-7"
                             style="box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);">
                             <ul class="col-span-3 border-r border-gray-200 px-7">
                                 <a href="#"
@@ -230,10 +240,398 @@
 
                 <a href="#" class="btn"><i class="fa-regular fa-user mr-2"></i> Mon espace</a>
             </nav>
+            <!-- end nav desktop -->
 
-            <div class="block lg:hidden cursor-pointer">
+
+
+
+            <!-- start nav mobile -->
+            <input type="checkbox" name="" id="menu" class="hidden peer">
+
+            <label for="menu" class="block peer-checked:hidden lg:hidden cursor-pointer">
                 <i class="fa-solid fa-bars text-3xl"></i>
-            </div>
+            </label>
+            <label for="menu" class="hidden peer-checked:block lg:hidden cursor-pointer text-3xl">
+                &times;
+            </label>
+            <nav
+                class="absolute z-10 left-0 right-0 w-100vw bg-white items-center gap-10  -top-[1000px] peer-checked:top-full flex lg:hidden flex-col transition-all duration-500 max-h-[calc(100vh-200px)] overflow-auto p-10">
+                <ul class="nav__items flex flex-col items-center gap-4  relative text-center w-full">
+
+                    <!-- start nav-item -->
+                    <li class="nav__item w-full">
+
+
+                        <input type="checkbox" name="nav" id="nav-1" class="hidden peer">
+                        <label for="nav-1" class="nav__link inline-block peer-checked:mb-5">La ville <i
+                                class="fa-solid fa-angle-down"></i></label>
+
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-1" class="hidden peer">
+                                <label for="sub-nav-1"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    La mairie de Montpellier <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-2" class="hidden peer">
+                                <label for="sub-nav-2"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Le territoire <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-3" class="hidden peer">
+                                <label for="sub-nav-3"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Pratique <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-4" class="hidden peer">
+                                <label for="sub-nav-4"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Les Montpelliérains <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                    </li>
+                    <!-- end nav-item -->
+
+                    <!-- start nav-item -->
+                    <li class="nav__item w-full">
+
+
+                        <input type="checkbox" name="nav" id="nav-2" class="hidden peer">
+                        <label for="nav-2" class="nav__link inline-block peer-checked:mb-5">Municipalité <i
+                                class="fa-solid fa-angle-down"></i></label>
+
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-5" class="hidden peer">
+                                <label for="sub-nav-5"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    La mairie de Montpellier <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-6" class="hidden peer">
+                                <label for="sub-nav-6"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Le territoire <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-7" class="hidden peer">
+                                <label for="sub-nav-7"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Pratique <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-8" class="hidden peer">
+                                <label for="sub-nav-8"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Les Montpelliérains <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                    </li>
+                    <!-- end nav-item -->
+
+                    <!-- start nav-item -->
+                    <li class="nav__item w-full">
+
+
+                        <input type="checkbox" name="nav" id="nav-3" class="hidden peer">
+                        <label for="nav-3" class="nav__link inline-block peer-checked:mb-5">Programme de la ville <i
+                                class="fa-solid fa-angle-down"></i></label>
+
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-9" class="hidden peer">
+                                <label for="sub-nav-9"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    La mairie de Montpellier <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Conseil municipal</a>
+                                    <a href="#" class="hover:text-primary hover:underline">La mairie</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Organisation des services</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Services de presse</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Action internationale</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Marchés publics</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Citoyenneté</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-10" class="hidden peer">
+                                <label for="sub-nav-10"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Le territoire <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Découvrir la ville</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Biodiversité</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Annuaire général</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Cartes & plans</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Urbanisme</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Outils d’amenagement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Se déplacer</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2 peer-checked:mb-4">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-11" class="hidden peer">
+                                <label for="sub-nav-11"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Pratique <i class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Démarches</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Education</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Transports</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Logement</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Social</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Santé</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Activités & emploi</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                        <!-- start sub-nav -->
+                        <div
+                            class="transition-all duration-500 h-0 overflow-hidden origin-top scale-y-0 peer-checked:scale-y-100 peer-checked:h-full flex flex-col gap-2">
+
+                            <!-- start sub-nav-item -->
+                            <ul>
+
+                                <input type="checkbox" name="sub-nav" id="sub-nav-12" class="hidden peer">
+                                <label for="sub-nav-12"
+                                    class="inline-block text-lg font-semibold text-gray-900 hover:text-primary peer-checked:text-primary">
+                                    Les Montpelliérains <i
+                                        class="fa-solid fa-angle-down transition-all duration-200 "></i>
+                                </label>
+
+                                <div
+                                    class="flex flex-col justify-start items-center gap-2 text-gray-600 h-0 peer-checked:h-full overflow-hidden transition-all origin-top scale-y-0 peer-checked:scale-y-100">
+                                    <a href="#" class="hover:text-primary hover:underline">Famille</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Associations</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Professionnels</a>
+                                    <a href="#" class="hover:text-primary hover:underline">Nouveaux arrivant</a>
+                                </div>
+                            </ul>
+                            <!-- end sub-nav-item -->
+
+                        </div>
+                        <!-- end sub-nav -->
+                    </li>
+                    <!-- end nav-item -->
+
+                    <li class="nav__item w-full"><a href="#" class="nav__link">Services </a></li>
+
+                    <li class="nav__item w-full"><a href="#" class="nav__link">Actualités</a></li>
+                </ul>
+
+                <a href="#" class="btn w-full text-center"><i class="fa-regular fa-user mr-2"></i> Mon espace</a>
+            </nav>
+            <!-- end nav mobile -->
         </div>
 
     </header>
@@ -392,7 +790,7 @@
             <!-- start Grid container -->
             <div class="grid grid-cols-12 gap-x-6 gap-y-12 ">
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-1.jpg" alt=""
@@ -415,7 +813,7 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-2.jpg" alt=""
@@ -442,7 +840,7 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-3.jpg" alt=""
@@ -464,7 +862,7 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-4.jpg" alt=""
@@ -486,7 +884,7 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-5.jpg" alt=""
@@ -508,7 +906,7 @@
                 </div>
                 <!-- end single card -->
                 <!-- start Single card -->
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 group actuality-card opacity-0">
                     <div
                         class="h-[17.5rem] mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 actuality-card-img rounded-sm">
                         <img src="./assets/images/actualitty-6.jpg" alt=""
@@ -537,7 +935,7 @@
 
     <!-- start events home section -->
     <section class="bg-gray-50 py-7">
-        <div class="container">
+        <div class="container event-home -translate-x-full">
             <p class="mb-2 max-w-xs text-black text-[1.75rem] leading-9">
                 <span class="text-blue-500 capitalize">évenements</span>
                 Programmes à venir.
@@ -550,7 +948,7 @@
     <!-- start events section -->
     <section class="py-14 ">
         <!-- start events controls -->
-        <div class="container py-6 block md:hidden">
+        <div class="container py-6 block sm:hidden">
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-arrow-right btn bg-transparent text-blue-800 border-blue-300 rounded-sm hover:bg-blue-300 rotate-180 prev-btn"
                     onclick="plusEventSlides(-1)"></i>
@@ -562,10 +960,11 @@
 
         <div class="container relative">
             <!-- start Grid container -->
-            <div class="flex sm:grid grid-cols-12 gap-x-6 gap-y-12 event-items h-64 sm:h-full overflow-hidden">
+            <div
+                class="flex sm:grid grid-cols-12 gap-x-6 gap-y-1 event-items h-64 sm:h-full overflow-hidden sm:overflow-visible">
                 <!-- start Single card -->
                 <div
-                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
+                    class="col-span-12 sm:col-span-6 xl:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4 sm:p-0 hover:mt-4 transition-all">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-1.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -583,7 +982,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
+                    <div class="flex items-center gap-5 overflow-hidden h-0 group-hover:h-6 group-hover:mb-4 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -592,7 +991,7 @@
                 <!-- end single card -->
                 <!-- start Single card -->
                 <div
-                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
+                    class="col-span-12 sm:col-span-6 xl:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4 sm:p-0 hover:mt-4 transition-all">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-2.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -610,7 +1009,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
+                    <div class="flex items-center gap-5 overflow-hidden h-0 group-hover:h-6 group-hover:mb-4 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -619,7 +1018,7 @@
                 <!-- end single card -->
                 <!-- start Single card -->
                 <div
-                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
+                    class="col-span-12 sm:col-span-6 xl:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4 sm:p-0 hover:mt-4 transition-all">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-3.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -637,7 +1036,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
+                    <div class="flex items-center gap-5 overflow-hidden h-0 group-hover:h-6 group-hover:mb-4 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -646,7 +1045,7 @@
                 <!-- end single card -->
                 <!-- start Single card -->
                 <div
-                    class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4">
+                    class="col-span-12 sm:col-span-6 xl:col-span-3 group event-card -translate-x-full sm:translate-x-0 absolute sm:static inset-0 p-4 sm:p-0 hover:mt-4 transition-all">
                     <div
                         class="h-60 mb-6 relative before:absolute before:inset-0 before:transition-all before:z-10 before:opacity-0 group-hover:before:opacity-100 events-card-img rounded-sm event-card-img">
                         <img src="./assets/images/event-4.jpg" alt="" class="w-full h-full object-cover rounded-sm">
@@ -664,7 +1063,7 @@
                             <p class="text-xs">Du 18 Octobre au 10 Novembre 2021</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 overflow-hidden opacity-0 group-hover:opacity-100 px-6">
+                    <div class="flex items-center gap-5 overflow-hidden h-0 group-hover:h-6 group-hover:mb-4 px-6">
                         <i class="fa-brands fa-facebook-f hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-twitter hover:text-blue-500 cursor-pointer text-lg"></i>
                         <i class="fa-brands fa-linkedin-in hover:text-blue-500 cursor-pointer text-lg"></i>
@@ -681,8 +1080,9 @@
     <!-- start info section -->
     <section class="bg-gray-50 py-14">
         <div class="container">
-            <div class="flex items-start gap-5 overflow-hidden">
-                <div class="group flex-1 shrink-0 basis-80">
+            <div class="flex grid-cols-12 items-start gap-5 overflow-x-hidden">
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
                     <div
                         class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
                         <img src="./assets/icons/bus.svg" alt="">
@@ -702,7 +1102,8 @@
                     </div>
                 </div>
 
-                <div class="group flex-1 shrink-0 basis-80">
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
                     <div
                         class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
                         <img src="./assets/icons/bus.svg" alt="">
@@ -722,7 +1123,8 @@
                     </div>
                 </div>
 
-                <div class="group flex-1 shrink-0 basis-80">
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
                     <div
                         class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
                         <img src="./assets/icons/bus.svg" alt="">
@@ -742,7 +1144,92 @@
                     </div>
                 </div>
 
-                <div class="group flex-1 shrink-0 basis-80">
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+                    <div
+                        class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
+                        <img src="./assets/icons/bus.svg" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl group-hover:text-primary mb-4">Circulation & Transport</h4>
+                        <p class="text-gray-800 leading-[1.375rem] mb-3">Recherchez votre itinéraires pour vous
+                            déplacer+
+                            dans
+                            la ville de
+                            Montpellier, consultez vos
+                            horaires de bus ou tramway. Et renseignez-vous aussi sur les rues en travaux. Se rendre à la
+                            gare ou à la plage n’a jamais été si simple !</p>
+
+                        <a href="#" class="text-[#6B7280] font-medium ">En savoir plus <i
+                                class="fa-solid fa-arrow-right ml-2 text-[#1A56DB] "></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+                    <div
+                        class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
+                        <img src="./assets/icons/bus.svg" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl group-hover:text-primary mb-4">Circulation & Transport</h4>
+                        <p class="text-gray-800 leading-[1.375rem] mb-3">Recherchez votre itinéraires pour vous
+                            déplacer+
+                            dans
+                            la ville de
+                            Montpellier, consultez vos
+                            horaires de bus ou tramway. Et renseignez-vous aussi sur les rues en travaux. Se rendre à la
+                            gare ou à la plage n’a jamais été si simple !</p>
+
+                        <a href="#" class="text-[#6B7280] font-medium ">En savoir plus <i
+                                class="fa-solid fa-arrow-right ml-2 text-[#1A56DB] "></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+                    <div
+                        class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
+                        <img src="./assets/icons/bus.svg" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl group-hover:text-primary mb-4">Circulation & Transport</h4>
+                        <p class="text-gray-800 leading-[1.375rem] mb-3">Recherchez votre itinéraires pour vous
+                            déplacer+
+                            dans
+                            la ville de
+                            Montpellier, consultez vos
+                            horaires de bus ou tramway. Et renseignez-vous aussi sur les rues en travaux. Se rendre à la
+                            gare ou à la plage n’a jamais été si simple !</p>
+
+                        <a href="#" class="text-[#6B7280] font-medium ">En savoir plus <i
+                                class="fa-solid fa-arrow-right ml-2 text-[#1A56DB] "></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
+                    <div
+                        class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
+                        <img src="./assets/icons/bus.svg" alt="">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-2xl group-hover:text-primary mb-4">Circulation & Transport</h4>
+                        <p class="text-gray-800 leading-[1.375rem] mb-3">Recherchez votre itinéraires pour vous
+                            déplacer+
+                            dans
+                            la ville de
+                            Montpellier, consultez vos
+                            horaires de bus ou tramway. Et renseignez-vous aussi sur les rues en travaux. Se rendre à la
+                            gare ou à la plage n’a jamais été si simple !</p>
+
+                        <a href="#" class="text-[#6B7280] font-medium ">En savoir plus <i
+                                class="fa-solid fa-arrow-right ml-2 text-[#1A56DB] "></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex-1 shrink-0 basis-full sm:basis-80 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3">
                     <div
                         class="h-[6.25rem] w-[6.25rem] rounded-full bg-blue-800 flex items-center justify-center p-2 mb-4">
                         <img src="./assets/icons/bus.svg" alt="">
