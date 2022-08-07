@@ -10,6 +10,53 @@
     @apply overflow-x-hidden;
   }
 
+  .loader-container.loaded {
+    animation: fadeOutLoader 1.5s ease forwards;
+  }
+
+  .loader {
+    @apply w-24 h-24 border-[3px] border-dotted border-white rounded-full inline-block relative;
+    border-style: solid solid dotted dotted;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  .loader::after {
+    @apply absolute inset-0 m-auto border-[3px] border-dotted border-[#ff3d00] w-12 h-12 rounded-full origin-center;
+    content: "";
+    box-sizing: border-box;
+    border-style: solid solid dotted;
+
+    animation: rotationBack 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes fadeOutLoader {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+
   body {
     @apply font-inter;
   }

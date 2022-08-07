@@ -1,3 +1,10 @@
+window.addEventListener("load", () => {
+  let loaderContainer = document.querySelector(".loader-container");
+  setTimeout(() => {
+    loaderContainer.classList.add("loaded");
+  }, 500);
+});
+
 let btnScrollToTop = document.querySelector("#scrollToTop");
 let actualitiesCards = document.querySelectorAll(".actuality-card");
 let eventsCards = document.querySelectorAll(".event-card");
